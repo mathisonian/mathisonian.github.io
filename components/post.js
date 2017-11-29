@@ -110,6 +110,9 @@ export default class Post extends React.Component {
         `}
         </style>
         <style global jsx>{`
+          a  {
+            cursor: pointer;
+          }
           .post-details img {
             max-width: 100%;
             display: block;

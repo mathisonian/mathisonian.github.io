@@ -4,7 +4,7 @@ class Center extends React.PureComponent {
 
   render() {
     return (
-      <div style={{margin: '0 auto', textAlign: 'center'}}>
+      <div style={Object.assign({margin: '0 auto', textAlign: 'center'}, this.props.style)}>
         {this.props.children}
       </div>
     );

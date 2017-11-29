@@ -15,7 +15,7 @@ export default WithPost({
     }),
     markup: `
 
-      Apparatus is a hybrid graphics editor and programming environment for creating interactive diagrams. In this post
+      [Apparatus](http://aprt.us/) is a hybrid graphics editor and programming environment for creating interactive diagrams. In this post
       I'll show how Apparatus graphics can be embedded in Idyll documents, and how a two way binding between Idyll variables
       and Apparatus attributes can be created.
 
@@ -29,7 +29,7 @@ export default WithPost({
       [var name:"roi" value:\` { x: [-1.5, 7.5], y: [-1.5, 7.5 ] } \` /]
 
       [Apparatus
-        _url: "http://aprt.us/editor/viewer-test/sum-of-odds.json"
+        _url: "https://cdn.rawgit.com/mathisonian/3ad1fbf668086b5e4c742abfebbff541/raw/4a443db3db931c459b563bdea5323df75947d4ea/sum-of-odds.json"
         _regionOfInterest: roi
         _width: 300
         _height: 300
@@ -43,11 +43,14 @@ export default WithPost({
 
       \`\`\`md
 [Apparatus
-  _url: "http://aprt.us/editor/viewer-test/sum-of-odds.json"
+  _url: "path/to/sum-of-odds.json"
   _regionOfInterest: roi
   _width: 300
   _height: 300 /]
       \`\`\`
+
+      The \`_regionOfInterest\` parameter tells Apparatus where to focus, and can be passed in like \`{ x: [-1, 1], y: [-1, 1] }\`.
+      The parameters starting with an underscore are used to configure Apparatus; other parameters will configure the graphic itself (you'll see more below).
 
       ## Communicating with the document
 
@@ -72,7 +75,7 @@ export default WithPost({
       [/center]
 
       [Apparatus
-        _url: "http://aprt.us/editor/viewer-test/sum-of-odds.json"
+        _url: "https://cdn.rawgit.com/mathisonian/3ad1fbf668086b5e4c742abfebbff541/raw/4a443db3db931c459b563bdea5323df75947d4ea/sum-of-odds.json"
         _regionOfInterest: roi
         _width: 300
         _height: 300
@@ -90,7 +93,7 @@ export default WithPost({
 
 **Drag on the square below and notice the slider move.**
 [Apparatus
-  _url: "http://aprt.us/editor/viewer-test/sum-of-odds.json"
+  _url: "path/to/sum-of-odds.json"
   _regionOfInterest: roi
   _width: 300
   _height: 300
@@ -117,21 +120,37 @@ export default WithPost({
     [display var:x /]
 
     [Apparatus
-      _url: "https://rawgit.com/mathisonian/d0946ec277daa876bf2157483123c479/raw/eb82e9ef390c214c86504d1d76c666ce8f763a3a/potted%2520plant%2520(1).json"
+      _url: "https://cdn.rawgit.com/mathisonian/d0946ec277daa876bf2157483123c479/raw/eb82e9ef390c214c86504d1d76c666ce8f763a3a/potted%2520plant%2520(1).json"
       _regionOfInterest: roi2
       _width: "100%"
       _height: 400
       growth:growth /]
 
 
-    By parameterizing the figure with Idyll variables, we can turn this into an
+    By parameterizing the figure with Idyll variables, we can quickly turn this into an
     animated graphic:
 
-    [center]
+    [center style:\`{marginBottom: 60}\`]
     [easer value:growth targetValue:17 ] Make it day [/easer]
 
     [easer value:growth targetValue:-1.5 ] Make it night [/easer]
     [/center]
+
+    Learn more about the two projects:
+
+[br/]
+    [b]
+      [a href:"https://idyll-lang.org" text:"https://idyll-lang.org" /]
+    [/b]
+    [br/][br/]
+
+  [b]
+    [a href:"http://aprt.us/" text:"http://aprt.us" /]
+  [/b]
+[br/][br/]
+
+  [small][i][a href:"https://github.com/mathisonian/mathisonian.github.io/blob/master/pages/writing/apparatus.js"]This post made with Idyll[/a][/i][/small]
     `
   }
 });
+

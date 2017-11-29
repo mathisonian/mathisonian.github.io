@@ -1,24 +1,43 @@
 import React from 'react';
 import load from 'little-loader'
-import { exception } from 'react-ga';
+import EventEmitter from 'events';
+
+const emitter = new EventEmitter();
 
 let scriptLoaded = false;
-let _aid = 0;
+let scriptLoading = false;
+
+
+//http://stackoverflow.com/questions/4588119/get-elements-css-selector-when-it-doesnt-have-an-id
+function fullPath(el){
+  var names = [];
+  while (el.parentNode){
+    if (el.id){
+      names.unshift('#'+el.id);
+      break;
+    }else{
+      if (el==el.ownerDocument.documentElement) names.unshift(el.tagName);
+      else{
+        for (var c=1,e=el;e.previousElementSibling;e=e.previousElementSibling,c++);
+        names.unshift(el.tagName+":nth-child("+c+")");
+      }
+      el=el.parentNode;
+    }
+  }
+  return names.join(" > ");
+}
+
 
 class Apparatus extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.id = _aid;
-    _aid++;
-
     this.state = {
-      scriptLoaded: scriptLoaded,
       viewer: null
     }
 
     this.handleViewerRender = this.handleViewerRender.bind(this);
+    this.handleRef = this.handleRef.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -61,20 +80,20 @@ class Apparatus extends React.Component {
   }
 
   initializeViewer() {
-    if (this.state.viewer) {
+    if (!this._ref || this.state.viewer) {
       return;
     }
     console.log('initializing viewer')
     console.log({
       url: this.props._url,
-      selector: `#idyll-apparatus-viewer-${this.id}`,
+      selector: fullPath(this._ref),
       regionOfInterest: this.props._regionOfInterest,
       onRender: this.handleViewerRender
     })
     this.setState({
       viewer: new ApparatusViewer({
         url: this.props._url,
-        selector: `#idyll-apparatus-viewer-${this.id}`,
+        selector: fullPath(this._ref),
         regionOfInterest: this.props._regionOfInterest,
         onRender: this.handleViewerRender
       })
@@ -82,18 +101,24 @@ class Apparatus extends React.Component {
   }
 
   componentDidMount() {
-    if (!scriptLoaded) {
+    if (!scriptLoaded && !scriptLoading) {
+      scriptLoading = true;
       load("https://rawgit.com/cdglabs/apparatus-site/gh-pages/editor/dist/apparatus-viewer.js", (err) => {
         console.log('script loaded')
         if (!err) {
           console.log('no error')
           scriptLoaded = true;
-          this.setState({ scriptLoaded: true });
+          scriptLoading = false;
           this.initializeViewer();
+          emitter.emit('scriptloaded');
         }
       });
-    } else {
+    } else if (scriptLoaded) {
       this.initializeViewer();
+    } else {
+      emitter.on('scriptloaded', () => {
+        this.initializeViewer();
+      })
     }
   }
 
@@ -101,10 +126,18 @@ class Apparatus extends React.Component {
     return false;
   }
 
+  handleRef(el) {
+    // console.log()
+    this._ref = el;
+    if (scriptLoaded) {
+      this.initializeViewer();
+    }
+  }
+
   render() {
     const { className, _width, _height, style } = this.props;
     return (
-      <div id={`idyll-apparatus-viewer-${this.id}`} className={className} style={Object.assign({ margin: '30px auto', width: _width ? _width: '100%', height: _height ? _height : 'auto'}, style)} />
+      <div ref={(el) => this.handleRef(el)} className={className} style={Object.assign({ margin: '30px auto', width: _width ? _width: '100%', height: _height ? _height : 'auto'}, style)} />
     );
   }
 }

@@ -8,6 +8,13 @@ const stages = {
   FINAL: 2
 }
 
+let isEasing = false;
+
+const animate = () => {
+  const update = TWEEN.update();
+  requestAnimationFrame(animate);
+};
+
 class Easer extends React.PureComponent {
 
   constructor(props) {
@@ -21,9 +28,11 @@ class Easer extends React.PureComponent {
   }
 
   onClick() {
-    if (this.state.stage !== stages.INITIAL) {
+    if (isEasing || this.state.stage !== stages.INITIAL) {
       return;
     }
+    isEasing = true;
+    TWEEN.removeAll();
     this.setState({stage: stages.ANIMATING});
     let _tween = { value : +this.props.value };
     new TWEEN.Tween(_tween)
@@ -33,14 +42,11 @@ class Easer extends React.PureComponent {
         this.props.updateProps({ value: _tween.value });
       }).onStop(() => {
         this.setState({stage: stages.INITIAL });
+      }).onComplete(() => {
+        isEasing = false;
+        this.setState({stage: stages.INITIAL });
       }).start();
 
-    const animate = () => {
-      const update = TWEEN.update();
-      if (update) {
-        requestAnimationFrame(animate);
-      }
-    };
 
     animate();
   }
