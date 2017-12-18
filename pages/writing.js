@@ -19,7 +19,7 @@ export default class extends React.Component {
       <Layout title="Writing" slug="/writing">
         <WritingLayout>
           <section>
-            <h4>Interactive</h4>
+            <h4>Interactivity and Data Visualization</h4>
             <ul>
               <li><Link  to="/writing/etymology-of-trig-functions"><a>The Etymology of Trig Functions</a></Link>
               <span className="year"> — 2017 </span>
@@ -35,6 +35,15 @@ export default class extends React.Component {
               </li>
               <li><Link  to="/writing/seattle-pds-dashcam-problem"><a>Visualizing Seattle PD's dashcam problem</a></Link>
               <span className="year"> — 2017 </span>
+              </li>
+              <li><Link  to="/writing/music-vis"><a>Music oscillator visualization </a></Link>
+              <span className="year"> — 2016 </span>
+              </li>
+              <li><Link  to="http://mathisonian.github.io/sunrise/"><a>Sunrise and sunset times</a></Link>
+              <span className="year"> — 2015 </span>
+              </li>
+              <li><Link  to="/writing/state-bar"><a>State shaped bar charts </a></Link>
+              <span className="year"> — 2014 </span>
               </li>
             </ul>
           </section>
@@ -66,20 +75,6 @@ export default class extends React.Component {
               </li>
               <li><Link  to="/writing/on-moving-to-the-nyc-tech-scene"><a>An introduction the New York tech scene</a></Link>
               <span className="year"> — 2013 </span>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h4>Data Viz Experiments</h4>
-            <ul>
-              <li><Link  to="/writing/music-vis"><a>Music oscillator visualization </a></Link>
-              <span className="year"> — 2016 </span>
-              </li>
-              <li><Link  to="http://mathisonian.github.io/sunrise/"><a>Sunrise and sunset times</a></Link>
-              <span className="year"> — 2015 </span>
-              </li>
-              <li><Link  to="/writing/state-bar"><a>State shaped bar charts </a></Link>
-              <span className="year"> — 2014 </span>
               </li>
             </ul>
           </section>

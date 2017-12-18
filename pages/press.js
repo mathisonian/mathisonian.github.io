@@ -21,10 +21,16 @@ export default class extends React.Component {
             <h4>2017</h4>
             <ul>
               <li>
+                <a href="http://www.visualisingdata.com/2017/12/best-visualisation-web-october-2017/">
+                  Best of the Visualization Web, October 2017
+                </a>
+                <span className="source">— Visualizing Data </span>
+              </li>
+              <li>
                 <a href="https://survivejs.com/blog/idyll-interview/">
                   Idyll - Narratives for the web - Interview with Matthew Conlen
                 </a>
-                <span className="source">— SurviveJS Blog </span>
+                <span className="source">— SurviveJS</span>
               </li>
             </ul>
           </section>

@@ -17,7 +17,7 @@ export default function WithPost(postData) {
 
     render() {
       return (
-        <Layout smallIntro={true} slug="/writing">
+        <Layout title={postData.title} description={postData.subtitle} smallIntro={true} slug="/writing" hideIllo={true}>
           <WritingLayout back={true}>
             <Post {...postData} />
           </WritingLayout>
@@ -30,7 +30,18 @@ export default function WithPost(postData) {
               font-weight: lighter;
             }
             div, p {
-              font-family: 'Lora;
+              font-family: 'Lora';
+            }
+          `}
+          </style>
+          <style jsx global>{`
+            twitterwidget {
+              margin-top: 30px !important;
+              margin-bottom: 30px !important;
+            }
+
+            .idyll-root {
+              margin-top: 45px;
             }
           `}
           </style>

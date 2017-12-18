@@ -111,8 +111,13 @@ export default class extends React.Component {
     return title ? `${title} | Matthew Conlen (mathisonian)` : 'Matthew Conlen (mathisonian)';
   }
 
+  getDescription() {
+    const { subtitle } = this.props;
+    return subtitle ? subtitle : 'Matthew Conlen is a computer science researcher and information designer based in Seattle, Washington. He collaborates with journalists, scientists, and engineers to tell stories and unlock insights with data.';
+  }
+
   render() {
-    const { children, title, slug, smallIntro } = this.props;
+    const { children, title, slug, smallIntro, hideIllo } = this.props;
     const { illustration } = this.state;
 
     return (
@@ -124,14 +129,15 @@ export default class extends React.Component {
           <meta property='og:title' content={this.getTitle()} />
           <meta property='og:url' content='https://mathisonian.com' />
           <meta property='og:type' content='website' />
-          <meta property='og:description' content='Matthew Conlen is a computer science researcher and information designer based in Seattle, Washington. He collaborates with journalists, scientists, and engineers to tell stories and unlock insights with data.' />
+          <meta property='og:description' content={this.getDescription()} />
           <meta property='og:image' content='https://mathisonian.com/static/img/illustrations/berries.png' />
+          <link rel='shortcut icon' type='image/x-icon' href='/static/favicon.ico' />
         </Head>
         <div className="content-container">
 
             <div className="illustration">
             {
-              illustration ? (
+              !hideIllo && illustration ? (
                 <div>
                   <img src={`/static/img/illustrations/${illustration.image}`} />
                   <div className="caption">

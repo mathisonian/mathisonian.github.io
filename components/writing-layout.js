@@ -78,6 +78,7 @@ export default ({back, children}) => (
       .writing-details li {
         padding-left: 0;
       }
+
       @media all and (max-width: 900px) {
         .writing-container {
           width: calc(100vw - 40px);

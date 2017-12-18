@@ -127,6 +127,10 @@ export default class Post extends React.Component {
             color: #5601FF;
           }
 
+          .post-details iframe {
+            display: block;
+            margin: 30px auto;
+          }
 
           .post-details a {
             color: #000;

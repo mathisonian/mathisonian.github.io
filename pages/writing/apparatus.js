@@ -6,7 +6,7 @@ import * as Components from 'idyll-components';
 
 export default WithPost({
   title: 'Using Apparatus with Idyll',
-  date: 'November, 2017',
+  date: 'December, 2017',
   idyll: {
     components: Object.assign({}, Components, {
       apparatus: Appartus,
@@ -15,14 +15,18 @@ export default WithPost({
     }),
     markup: `
 
-      [Apparatus](http://aprt.us/) is a hybrid graphics editor and programming environment for creating interactive diagrams. In this post
+      [Apparatus](http://aprt.us/) is a hybrid graphics editor and programming environment for creating interactive diagrams. They offer an [online editor](http://aprt.us/) that allows authors to use a direct-manipulation
+      style interface to create paramaterized interactive widgets. This video offers a quick overview:
+
+      [iframe src:"https://player.vimeo.com/video/140304675" width:420 height:263 frameborder:0 webkitallowfullscreen:true mozallowfullscreen:true allowfullscreen:true /]
+
+      In this post
       I'll show how Apparatus graphics can be embedded in Idyll documents, and how a two way binding between Idyll variables
       and Apparatus attributes can be created.
 
       ## Embedding
 
-      First, we need an Apparatus figure. I'll use an existing example
-      from [http://aprt.us/editor/viewer-test/javascript.html](http://aprt.us/editor/viewer-test/javascript.html) for the purposes of this walkthrough. It displays a visual technique for thinking about summations of odd numbers: they always add to a perfect square!
+      First, we need an Apparatus figure. I'll use an [existing example](http://aprt.us/editor/viewer-test/javascript.html) for the purposes of this walkthrough. It displays a visual technique for thinking about summations of consecutive odd numbers starting with one: they always add to a perfect square!
       Drag the handle in this graphic to see:
 
       [var name:"_n" value:0 /]
@@ -35,8 +39,8 @@ export default WithPost({
         _height: 300
         N:_n  /]
 
-      Internally, this Apparatus figure keeps track of a single state variable, \`N\`, that determines how things are drawn.
-      Currently \`N\` is [Display var:_n format:"d" /].
+      The graphic provides a geometric intuition for why this mathematical statement would hold true. The next odd number always completes the next outer "layer" of the square.
+      Internally, this Apparatus figure keeps track of a single state variable, \`N\`, that determines how things are rendered on your screen. Currently \`N\` is [Display var:_n format:"d" /].
 
       I've created a new Apparatus component that makes it easy to embed these graphics
       in your Idyll documents. Here's the code to embed that interactive graphic:
@@ -136,6 +140,8 @@ export default WithPost({
     [easer value:growth targetValue:-1.5 ] Make it night [/easer]
     [/center]
 
+    The component is open source and available at [https://github.com/idyll-lang/idyll-apparatus-component](https://github.com/idyll-lang/idyll-apparatus-component).
+
     Learn more about the two projects:
 
 [br/]
@@ -149,7 +155,7 @@ export default WithPost({
   [/b]
 [br/][br/]
 
-  [small][i][a href:"https://github.com/mathisonian/mathisonian.github.io/blob/master/pages/writing/apparatus.js"]This post made with Idyll[/a][/i][/small]
+  [small][i][a href:"https://github.com/mathisonian/mathisonian.github.io/blob/master/pages/writing/apparatus.js"]See the source for this post[/a][/i].[/small]
     `
   }
 });
