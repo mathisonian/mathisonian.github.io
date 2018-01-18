@@ -112,8 +112,9 @@ export default class extends React.Component {
   }
 
   getDescription() {
-    const { subtitle } = this.props;
-    return subtitle ? subtitle : 'Matthew Conlen is a computer science researcher and information designer based in Seattle, Washington. He collaborates with journalists, scientists, and engineers to tell stories and unlock insights with data.';
+    const { description, subtitle } = this.props;
+    const ret = subtitle || description || 'Matthew Conlen is a computer science researcher and information designer based in Seattle, Washington. He collaborates with journalists, scientists, and engineers to tell stories and unlock insights with data.';
+    return ret;
   }
 
   render() {

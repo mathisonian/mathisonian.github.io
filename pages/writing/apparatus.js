@@ -6,6 +6,7 @@ import * as Components from 'idyll-components';
 
 export default WithPost({
   title: 'Using Apparatus with Idyll',
+  subtitle: 'Combining the two tools gets us one step closer to an authoring environment with interactivity at its core.',
   date: 'December, 2017',
   idyll: {
     components: Object.assign({}, Components, {
@@ -15,13 +16,13 @@ export default WithPost({
     }),
     markup: `
 
-      [Apparatus](http://aprt.us/) is a hybrid graphics editor and programming environment for creating interactive diagrams. They offer an [online editor](http://aprt.us/) that allows authors to use a direct-manipulation
+      [Apparatus](http://aprt.us/), a project by [Toby Schachman](http://tobyschachman.com/) and [Joshua Horowitz](http://joshuahhh.com/), is a hybrid graphics editor and programming environment for creating interactive diagrams. They offer an [online editor](http://aprt.us/) that allows authors to use a direct-manipulation
       style interface to create paramaterized interactive widgets. This video offers a quick overview:
 
-      [iframe src:"https://player.vimeo.com/video/140304675" width:420 height:263 frameborder:0 webkitallowfullscreen:true mozallowfullscreen:true allowfullscreen:true /]
+      [iframe src:"https://player.vimeo.com/video/140304675" width:420 height:263 frameBorder:0 webkitallowfullscreen:"true" mozallowfullscreen:"true" allowfullscreen:"true" /]
 
       In this post
-      I'll show how Apparatus graphics can be embedded in Idyll documents, and how a two way binding between Idyll variables
+      I'll show how Apparatus graphics can be embedded in [Idyll documents](http://idyll-lang.org/), and how a two way binding between Idyll variables
       and Apparatus attributes can be created.
 
       ## Embedding
@@ -140,7 +141,8 @@ export default WithPost({
     [easer value:growth targetValue:-1.5 ] Make it night [/easer]
     [/center]
 
-    The component is open source and available at [https://github.com/idyll-lang/idyll-apparatus-component](https://github.com/idyll-lang/idyll-apparatus-component).
+    The component is open source and available at [https://github.com/idyll-lang/idyll-apparatus-component](https://github.com/idyll-lang/idyll-apparatus-component). Thanks to Josh Horowitz for all of his help
+    getting this to work!
 
     Learn more about the two projects:
 
