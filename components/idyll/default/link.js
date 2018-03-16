@@ -6,12 +6,9 @@ class Link extends React.PureComponent {
   }
 
   render() {
-    let props = this.props;
-    if (props.url) {
-      props.href = props.url;
-    }
+    const href = this.props.href || this.props.url || undefined;
     return (
-      <a {...props}>
+      <a {...this.props} href={href} >
         {this.props.text || this.props.children}
       </a>
     );

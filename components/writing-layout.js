@@ -23,6 +23,7 @@ export default ({back, children}) => (
       </div>
     </div>
     <style jsx>{`
+
       .writing-nav-header {
         font-family: Helvetica, Arial, sans-serif;
         font-weight: bold;

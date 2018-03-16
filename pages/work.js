@@ -164,16 +164,19 @@ export default class extends React.Component {
           </p>
         </WorkItem>
         <WorkItem
-          title="Selected conference presentations" >
+          title="Selected papers and presentations" >
           <ul>
             <li>
-              Matthew Conlen and and Jeffrey Heer. Idyll: A domain specific language for the rapid development of interactive news articles. <i>Computation+Journalism Symposium</i>. 2017.
+              <b>Towards Design Principles for Visual Analytics in Operations Contexts</b>: Matthew Conlen, Sara Stalla, Chelly Jin, Maggie Hendrie, Hillary Mushkin, Santiago Lombeyda, and Scott Davidoff. <i>CHI</i> 2018. <a href="/static/papers/towards-design-principles-for-visual-analtyics-in-operations-contexts.pdf">PDF</a>
             </li>
             <li>
-              Matthew Conlen and Juraj Milcak. A Winning Strategy for Tic-Tac-Toe on an Affine Plane of Order 4.<i> Joint Mathematics Meeting</i>. 2011.
+            <b>Idyll: A domain specific language for the rapid development of interactive news articles</b>: Matthew Conlen and Jeffrey Heer. <i>Computation+Journalism Symposium</i>. 2017.
             </li>
             <li>
-              Matthew Conlen and Juraj Milcak. A Winning Strategy for Tic-Tac-Toe on an Affine Plane of Order 4.<i> Young Mathematicians Conference</i>. 2010.
+              <b>A Winning Strategy for Tic-Tac-Toe on an Affine Plane of Order 4</b>: Matthew Conlen and Juraj Milcak.<i> Joint Mathematics Meeting</i>. 2011.
+            </li>
+            <li>
+            A Winning Strategy for Tic-Tac-Toe on an Affine Plane of Order 4: Matthew Conlen and Juraj Milcak. <i>Young Mathematicians Conference</i>. 2010.
             </li>
           </ul>
         </WorkItem>

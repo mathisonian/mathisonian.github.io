@@ -2,6 +2,22 @@
 import React from 'react';
 import dynamic from 'next/dynamic'
 
+export const hashCode = (str) => {
+  var hash = 0;
+  var i;
+  var chr;
+  if (str.length === 0) {
+    return hash;
+  }
+  for (i = 0; i < str.length; i++) {
+    chr = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
+
+
 export default class Post extends React.Component {
 
   renderIdyll() {
@@ -11,6 +27,7 @@ export default class Post extends React.Component {
     return <IdyllDocument
       ast={compile(idyll.markup)}
       components={idyll.components}
+      key={hashCode(idyll.markup)}
       datasets={{}} />
   }
   render() {
@@ -110,6 +127,11 @@ export default class Post extends React.Component {
         `}
         </style>
         <style global jsx>{`
+
+          hr {
+            color: black;
+            margin 3em 0;
+          }
           a  {
             cursor: pointer;
           }

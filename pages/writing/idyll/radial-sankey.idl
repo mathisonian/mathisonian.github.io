@@ -1,0 +1,60 @@
+### Background
+
+Sankey diagrams are a type of flow diagram that use width to convey
+the amount of flow throughout parts of a system. They get their name from a 1898 diagram made by made by
+Matthew H. Sankey, published in a civil engineering journal.
+
+
+
+![sankey](https://upload.wikimedia.org/wikipedia/commons/1/10/JIE_Sankey_V5_Fig1.png)
+
+[br/]
+
+The graphic shows the flow of energy through a system, compactly displaying how
+some energy is lost to smoke and friction before being converted into useful output. These diagrams are classic: Menard's map of [Napoleon's march through Russia](https://en.wikipedia.org/wiki/Charles_Joseph_Minard) uses the same idea, although that predated Sankey's work (it was made in 1869).
+
+![sankey2](https://datavizblog.files.wordpress.com/2017/10/trump-sankey.png)
+[small][a href:"https://datavizblog.com/2017/10/16/sankey-diagram-who-does-president-trump-attach-the-most-on-twitter/"]*https://datavizblog.com/2017/10/16/sankey-diagram-who-does-president-trump-attach-the-most-on-twitter/*[/a][/small]
+
+The diagrams are popular in infographics, but while a [D3 package](https://github.com/d3/d3-sankey) exists, you don't often see interactive Sankey diagrams used in a journalistic context.
+
+### Form
+
+
+There is no defined way to layout a Sankey diagram. They can take a custom shape based on what they represent, for example according to the physical form of an engine or a geography. They might also simply have their contents ordered from top to bottom or left to right.
+
+![rectangle](https://raw.githubusercontent.com/d3/d3-sankey/master/img/energy.png)
+
+This leads to most Sankey diagrams existing some kind of cartesian coordinate system. As with many types of data visualizations, it is interesting to see what happens when a polar coordinate system is used instead. First, lets take a quick look at another type of polar data visualization.
+
+Consider the sunburst diagram, or sunburst. Sunbursts can be thought of as an extension of pie (or dougnut) charts that show proportions at multiple levels of a hierarchy.
+
+Here's what John Stasko's original sunbursts looked like:
+
+![sunburst](https://www.cc.gatech.edu/gvu/ii/sunburst/exview.jpg)
+
+The sunburst chart was [developed by at Georgia Tech](http://www.sciencedirect.com/science/article/pii/S1071581900904208)  around the turn of the century as a radial alternative to Ben Schneiderman's [space-filling treemaps](https://en.wikipedia.org/wiki/Treemapping).
+
+A nice use of the sunburst can be seen in Daisy Disk, a program that uses
+an interactive chart to allow users to navigate their file system and see what is using up disk space.
+
+[iframe width:"100%" height:"315" src:"https://www.youtube.com/embed/aksFpEjE3pQ?start=12" frameborder:"0" allow:"autoplay; encrypted-media" allowfullscreen:true /]
+
+The video shows a use selecting individual segments on the sunburst to move up and down the folder structure on their
+computer, seeing how large each folder is, proportianally, in the visualization.
+
+Radial layouts are nice because they are so compact, and because they provide an implied direction via a center that can help guide the viewer's eye. While there are some issues with radial layouts (e.g. distortion), they can be worth using in specific situations.
+
+### Radial Sankey
+
+With few modifications we can create a radial Sankey diagram. We're going to pick one node to be "in focus", and show the inbound and outbound flow radially.
+
+*TK* rough sketch
+
+*TK* Input
+
+*TK* Input and output
+
+*TK* Note on interactivity
+
+[iframe width:"100%" height:"315" src:"https://www.youtube.com/embed/8bhq08BQLDs?start=4" frameborder:"0" allow:"autoplay; encrypted-media" allowfullscreen:true /]
