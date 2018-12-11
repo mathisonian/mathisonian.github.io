@@ -167,6 +167,12 @@ export default class extends React.Component {
           title="Selected papers and presentations" >
           <ul>
             <li>
+              <b>The Beginner's Guide to Dimensionality Reduction</b>: Matthew Conlen, Fred Hohman. <i>IEEE Vis Workshop on Visualization for AI Explainability</i> 2018. <a href="https://idyll.pub/post/dimensionality-reduction-293e465c2a3443e8941b016d/">Interactive Article</a>
+            </li>
+            <li>
+              <b>Idyll: A Markup Language for Authoring and Publishing Interactive Articles on the Web</b>: Matthew Conlen, Jeffrey Heer. <i>UIST</i> 2018. <a href="/static/papers/2018-Idyll-UIST.pdf">PDF</a>
+            </li>
+            <li>
               <b>Towards Design Principles for Visual Analytics in Operations Contexts</b>: Matthew Conlen, Sara Stalla, Chelly Jin, Maggie Hendrie, Hillary Mushkin, Santiago Lombeyda, and Scott Davidoff. <i>CHI</i> 2018. <a href="/static/papers/towards-design-principles-for-visual-analtyics-in-operations-contexts.pdf">PDF</a>
             </li>
             <li>
@@ -209,6 +215,9 @@ export default class extends React.Component {
       <div>
         <WorkItem title="Selected bylines">
           <ul>
+            <li>
+              <a href="https://www.cnn.com/election/2018/forecast/" target="_blank">CNN’s 2018 Election Forecast with Harry Enten</a> — CNN
+            </li>
             <li>
               <a href="https://fivethirtyeight.com/features/gun-deaths/" target="_blank">Gun Deaths In America</a> — FiveThirtyEight. <i>Winner: Information is Beautiful, Data Visualization of the Year, Bronze.</i>
             </li>

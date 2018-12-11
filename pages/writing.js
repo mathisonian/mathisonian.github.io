@@ -50,6 +50,9 @@ export default class extends React.Component {
           <section>
             <h4>Technical</h4>
             <ul>
+              <li><Link  to="/writing/a-short-note-on-debuggers"><a>A Short Note on Debuggers</a></Link>
+              <span className="year"> — 2018 </span>
+              </li>
               <li><Link  to="/writing/specialized-tools"><a>Specialized Tools</a></Link>
               <span className="year"> — 2018 </span>
               </li>

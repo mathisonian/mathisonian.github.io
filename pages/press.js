@@ -18,6 +18,44 @@ export default class extends React.Component {
       <Layout title="Press" slug="/press">
         <PressLayout>
           <section>
+            <h4>2018</h4>
+            <ul>
+              <li>
+                <a href="https://www.cjr.org/special_report/2018-midterms-forecasts-538-cnn-times-needle.php">
+                Forecasting the midterms: Uncertainty with a chance of finger-pointing
+                </a>
+                <span className="source">— Columbia Journalism Review</span>
+              </li>
+              <li>
+                <a  href="https://medium.com/swlh/make-your-app-stand-out-with-data-driven-stories-b6d6f2c2449c">
+                  Idyll-lang: Make your app stand out with interactive data-driven stories
+                </a>
+                <span className="source">— The Startup | Medium </span>
+              </li>
+              <li>
+                <a href="http://www.visualisingdata.com/2018/09/best-of-the-visualisation-web-june-2018/">
+                  Best of the Visualization Web, June 2018
+                </a>
+                <span className="source">— Visualizing Data </span>
+              </li>
+              <li>
+                <a href="https://gigazine.net/news/20180509-how-to-tune-guitar/">
+                  ギターを耳でチューニングする方法がわかる「How To: Tune a Guitar」
+                </a>
+                <span className="source">— GIGAZINE {' '}
+                <a href="https://gigazine.net/gsc_news/en/20180509-how-to-tune-guitar/">
+                  (english)
+                </a></span>
+              </li>
+              <li>
+                <a href="https://tympanus.net/codrops/collective/collective-414/">
+                  A beautiful and interactive guide that will teach you how to tune a guitar.
+                </a>
+                <span className="source">— Codrops: Collective</span>
+              </li>
+            </ul>
+          </section>
+          <section>
             <h4>2017</h4>
             <ul>
               <li>
@@ -37,6 +75,12 @@ export default class extends React.Component {
           <section>
             <h4>2016</h4>
             <ul>
+              <li>
+                <a href="https://javascriptweekly.com/issues/313">
+                  premonish: Predicts Which DOM Element A User Will Interact With Next
+                </a>
+                <span className="source">— JavaScript Weekly </span>
+              </li>
               <li>
                 <a href="https://www.livescience.com/56881-information-is-beautiful-awards.html">
                   Winning Data Visualizations Reveal Information Is Beautiful

@@ -45,7 +45,7 @@ const WorkItem = ({ title, image, subtitle, children }) => {
           height: 200px;
           width: 100%;
           margin-top: 14px;
-          background-size: 100%;
+          background-size: contain;
           background-position: center center;
           background-repeat: no-repeat;
         }
