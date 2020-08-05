@@ -8,6 +8,9 @@ export default ({children}) => (
       <div className="press-nav">
           <div className="press-nav-header">Selected Press</div>
           <div className="press-nav-list">
+          <div>
+            <span className="note">Press coverage of projects that I helped create.</span>
+          </div>
           <div><Link preload to="/"><a>Back Home</a></Link></div>
           </div>
       </div>
@@ -37,6 +40,15 @@ export default ({children}) => (
         color: black;
         text-decoration: none;
         line-height: 18px;
+      }
+      .press-nav-list .note {
+        font-style: italic;
+        text-transform: none;
+        line-height: 14px;
+      }
+      .press-nav-list .note a {
+        // color: blue;
+        text-decoration: underline;
       }
 
       .press-nav-list {

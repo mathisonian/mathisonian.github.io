@@ -1,18 +1,10 @@
 import React from 'react'
 import Post from '../components/post'
-import { Link } from '../routes';
+import Link from 'next/link';
 
 export default function WithPost(iframeUrl) {
   return class _WithPost extends React.Component {
-    static async getInitialProps({ req }) {
-      // const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
-      // return { userAgent }
-      return {}
-    }
 
-    componentDidCatch() {
-
-    }
 
     render() {
       return (
@@ -20,7 +12,7 @@ export default function WithPost(iframeUrl) {
           <iframe src={iframeUrl}>
             Your browser doesn't support iframes
           </iframe>
-          <Link to="/writing"><div className="back">
+          <Link href="/writing"><div className="back">
             <a>← Back</a>
           </div></Link>
           <style jsx>{`

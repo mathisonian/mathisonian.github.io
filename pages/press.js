@@ -18,13 +18,60 @@ export default class extends React.Component {
       <Layout title="Press" slug="/press">
         <PressLayout>
           <section>
+            <h4>2019</h4>
+            <ul>
+              <li>
+                <a href="https://wonkhe.com/blogs/simulating-university-life-from-feast-to-famine/">
+                Simulating university life: from feast to famine
+                </a>
+                <span className="source">— Wonkhe</span>
+              </li>
+              <li>
+                <a href="https://www.fastcompany.com/90353987/the-secret-life-of-a-jpeg">
+                The secret life of a JPEG
+                </a>
+                <span className="source">— Fast Company</span>
+              </li>
+              <li>
+                <a href="https://www.microsiervos.com/archivo/ordenadores/viaje-interactivo-archivo-jpeg-explicaciones-byte-a-byte.html">
+                  Viaje interactivo a las entrañas de un archivo JPEG con explicaciones detalladas byte a byte
+                </a>
+                <span className="source">— microsiervos</span>
+              </li>
+              <li>
+                <a href="http://www.visualisingdata.com/2019/02/10-significant-visualisation-developments-july-to-december-2018/">
+                  10 Significant Visualization Developments: July to December 2018
+                </a>
+                <span className="source">— Visualizing Data</span>
+              </li>
+            </ul>
+          </section>
+          <section>
             <h4>2018</h4>
             <ul>
+              <li>
+                <a href="https://www.cc.gatech.edu/news/615416/designers-programmers-and-researchers-join-forces-create-new-kind-digital-magazine">
+                Designers, Programmers, and Researchers Join Forces to Create a New Kind of Digital Magazine Called the Parametric Press
+                </a>
+                <span className="source">— Georgia Tech CSE</span>
+              </li>
+              <li>
+                <a href="https://flowingdata.com/2018/12/27/kernel-density-estimation-explainer/">
+                Kernel density estimation explainer
+                </a>
+                <span className="source">— FlowingData</span>
+              </li>
               <li>
                 <a href="https://www.cjr.org/special_report/2018-midterms-forecasts-538-cnn-times-needle.php">
                 Forecasting the midterms: Uncertainty with a chance of finger-pointing
                 </a>
                 <span className="source">— Columbia Journalism Review</span>
+              </li>
+              <li>
+                <a href="http://www.visualisingdata.com/2018/12/best-of-the-visualisation-web-october-2018/">
+                  Best of the Visualization Web, October 2018
+                </a>
+                <span className="source">— Visualizing Data </span>
               </li>
               <li>
                 <a  href="https://medium.com/swlh/make-your-app-stand-out-with-data-driven-stories-b6d6f2c2449c">
@@ -75,6 +122,12 @@ export default class extends React.Component {
           <section>
             <h4>2016</h4>
             <ul>
+              <li>
+                <a href="https://www.cjr.org/q_and_a/could_explorable_explanations_help_tell_a_new_kind_of_story.php">
+                Could ‘explorable explanations’ help tell a new kind of story?
+                </a>
+                <span className="source">— Columbia Journalism Review</span>
+              </li>
               <li>
                 <a href="https://javascriptweekly.com/issues/313">
                   premonish: Predicts Which DOM Element A User Will Interact With Next

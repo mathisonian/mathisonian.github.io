@@ -1,22 +1,22 @@
 
 import { CONTAINER_WIDTH } from '../config/layout';
-import { Link } from '../routes';
+import Link from 'next/link'
 
 const isSelected = (slug, name) => {
   return slug === name ? 'selected' : ''
 };
 
-export default ({slug, children}) => (
+const WorkLayout = ({slug, children}) => (
   <div>
     <div className="work-container">
       <div className="work-nav">
-          <div className="work-nav-header"><Link preload to="/"><a style={{fontWeight: 'bold'}}>Work</a></Link></div>
+          <div className="work-nav-header"><Link href="/"><a style={{fontWeight: 'bold'}}>Work</a></Link></div>
           <div className="work-nav-list">
-          <Link preload to="/work/journalism"><div><a className={isSelected(slug, 'journalism')}>Journalism</a></div></Link>
-          <Link preload to="/work/science"><div><a className={isSelected(slug, 'science')}>Science</a></div></Link>
-          <Link preload to="/work/open-source"><div><a className={isSelected(slug, 'open-source')}>Open Source</a></div></Link>
-          <Link preload to="/work/research"><div><a className={isSelected(slug, 'research')}>Research</a></div></Link>
-          {/* <Link preload to="/work/other"><div><a className={isSelected(slug, 'other')}>Other</a></div></Link> */}
+          <Link href="/work/journalism"><div><a className={isSelected(slug, 'journalism')}>Journalism</a></div></Link>
+          <Link href="/work/open-source"><div><a className={isSelected(slug, 'open-source')}>Open Source</a></div></Link>
+          <Link href="/work/publishing"><div><a className={isSelected(slug, 'publishing')}>Publishing</a></div></Link>
+          <Link href="/work/research"><div><a className={isSelected(slug, 'research')}>Research</a></div></Link>
+          <Link href="/work/science"><div><a className={isSelected(slug, 'science')}>Science</a></div></Link>
           </div>
       </div>
       <div className="work-details">
@@ -106,3 +106,5 @@ export default ({slug, children}) => (
     </style>
   </div>
 )
+
+export default WorkLayout;

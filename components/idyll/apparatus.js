@@ -142,4 +142,4 @@ class Apparatus extends React.Component {
   }
 }
 
-module.exports = Apparatus;
+export default Apparatus;

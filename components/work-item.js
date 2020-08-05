@@ -1,5 +1,5 @@
 
-const WorkItem = ({ title, image, subtitle, children }) => {
+const WorkItem = ({ title, image, subtitle, children, url }) => {
   return (
     <div className="item">
       <div className="item-header">
@@ -12,7 +12,7 @@ const WorkItem = ({ title, image, subtitle, children }) => {
       </div>
       {
         image ? (
-          <div className="item-image" style={{backgroundImage: `url(/static/img/${image})`}} />
+          <a href={url}><img className="item-image" src={`/static/img/${image}`} /></a>
         ) : null
       }
 
@@ -42,12 +42,9 @@ const WorkItem = ({ title, image, subtitle, children }) => {
         }
 
         .item-image {
-          height: 200px;
+          height: auto;
           width: 100%;
           margin-top: 14px;
-          background-size: contain;
-          background-position: center center;
-          background-repeat: no-repeat;
         }
 
         .item {

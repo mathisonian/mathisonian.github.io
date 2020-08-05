@@ -113,9 +113,11 @@ export default class extends React.Component {
 
   getDescription() {
     const { description, subtitle } = this.props;
-    const ret = subtitle || description || 'Matthew Conlen is a computer science researcher and information designer based in Seattle, Washington. He collaborates with journalists, scientists, and engineers to tell stories and unlock insights with data.';
+    const ret = subtitle || description || 'Matthew Conlen is working as a graphics editor at the New York Times and completing a Ph.D. in computer science at the University of Washington.';
     return ret;
   }
+
+
 
   render() {
     const { children, title, slug, smallIntro, hideIllo } = this.props;
@@ -127,6 +129,7 @@ export default class extends React.Component {
           <title>{this.getTitle()}</title>
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+          <meta name='description' content={this.getDescription()} />
           <meta property='og:title' content={this.getTitle()} />
           <meta property='og:url' content='https://mathisonian.com' />
           <meta property='og:type' content='website' />
@@ -150,21 +153,21 @@ export default class extends React.Component {
             }
           </div>
           <div className="intro">
-            <b>Matthew Conlen</b> is a computer science researcher and information designer based in Seattle, Washington. He collaborates with journalists, scientists, and engineers to tell stories and unlock insights with data.
+            <b>Matthew Conlen</b> is working as a graphics editor at the New York Times and completing a computer science Ph.D at the University of Washington.
           </div>
           <div className="layout-page-container">
             { children }
           </div>
           <header>
             <nav>
-            <Link preload href='/'><div><a className={isSelected(slug, '/')}>Work</a></div></Link>
-            <Link preload href='/writing'><div><a className={isSelected(slug, '/writing')}>Writing</a></div></Link>
-            <Link preload href='/press'><div><a className={isSelected(slug, '/press')}>Press</a></div></Link>
-            <div><a className={`no-border ${this.state.showContact ? 'selected' : ''}`} onClick={this.toggleContact}>Contact</a></div>
+            <Link href='/'><div><a className={isSelected(slug, '/')}>Work</a></div></Link>
+            <Link href='/writing'><div><a className={isSelected(slug, '/writing')}>Writing</a></div></Link>
+            <Link href='/press'><div><a className={isSelected(slug, '/press')}>Press</a></div></Link>
+            <div onClick={this.toggleContact} className="contact-button"><a className={`no-border ${this.state.showContact ? 'selected' : ''}`} >Contact</a></div>
             <div className={`contact`}>
-            <div><Link href='mailto:contact@mathisonian.com'><a>Email</a></Link></div>
-            <div><Link href='https://github.com/mathisonian'><a>GitHub</a></Link></div>
-            <div><Link href='https://twitter.com/mathisonian'><a>Twitter</a></Link></div>
+            <div><a href='mailto:contact@mathisonian.com'>Email</a></div>
+            <div><a href='https://github.com/mathisonian'>GitHub</a></div>
+            <div><a href='https://twitter.com/mathisonian'>Twitter</a></div>
             </div>
             </nav>
           </header>
@@ -201,6 +204,9 @@ export default class extends React.Component {
           }
 
 
+          .contact-button {
+            padding-bottom: 0.5em;
+          }
           .content-container::-webkit-scrollbar {
             display: none;
           }

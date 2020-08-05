@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "analyze": "cross-env ANALYZE=1 next build"
@@ -21,11 +21,11 @@
     "idyll-components": "^2.8.4",
     "idyll-document": "^2.0.4",
     "little-loader": "^0.2.0",
-    "next": "^4.1.4",
+    "next": "^9.5.1",
     "next-routes": "^1.1.0",
     "raf": "^3.4.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-ga": "^2.3.5",
     "react-latex": "^1.2.0",
     "react-tweet-embed": "^1.0.8",

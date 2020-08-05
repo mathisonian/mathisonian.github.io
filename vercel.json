@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "alias": ["mathisonian.com"],
+  "routes": [
+    { "src": "/weblog/(.*)", "status": 302, "headers": { "Location": "/writing/$1" } },
+    { "src": "/com.asmallgrin.www/?", "status": 302, "headers": { "Location": "/writing/keith" } },
+    { "src": "/portfolio/?", "status": 302, "headers": { "Location": "/" } },
+    { "src": "/work/?", "status": 302, "headers": { "Location": "/" } }
+  ]
+}

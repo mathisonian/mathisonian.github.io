@@ -1,18 +1,18 @@
 
 import { CONTAINER_WIDTH } from '../config/layout';
-import { Link } from '../routes';
+import Link from 'next/link';
 
-export default ({back, children}) => (
+const WritingLayout = ({back, children}) => (
   <div>
     <div className="writing-container">
       <div className="writing-nav">
           <div className="writing-nav-header">Writing</div>
           <div className="writing-nav-list">
           {
-            back ? <div><Link to="/writing/"><a>← Back</a></Link></div> : (
+            back ? <div><Link href="/writing/"><a>← Back</a></Link></div> : (
               <div>
                 <span className="note">This is a collection of personal writing. For news bylines,
-                  see <Link to="/work/journalism"><a>journalism</a></Link>.</span>
+                  see <Link href="/work/journalism"><a>journalism</a></Link>.</span>
               </div>
             )
           }
@@ -112,3 +112,5 @@ export default ({back, children}) => (
     </style>
   </div>
 )
+
+export default WritingLayout;
