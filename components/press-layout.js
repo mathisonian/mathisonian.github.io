@@ -1,6 +1,6 @@
 
 import { CONTAINER_WIDTH } from '../config/layout';
-import { Link } from '../routes';
+import Link from 'next/link';
 
 export default ({children}) => (
   <div>
@@ -11,7 +11,7 @@ export default ({children}) => (
           <div>
             <span className="note">Press coverage of projects that I helped create.</span>
           </div>
-          <div><Link preload to="/"><a>Back Home</a></Link></div>
+          <div><Link href="/"><a>Back Home</a></Link></div>
           </div>
       </div>
       <div className="press-details">

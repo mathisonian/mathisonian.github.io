@@ -1,1 +1,1 @@
-export const CONTAINER_WIDTH = '625px';
+export const CONTAINER_WIDTH = '650px';

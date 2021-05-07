@@ -5,15 +5,6 @@ import WritingLayout from '../components/writing-layout';
 
 export default function WithPost(postData) {
   return class _WithPost extends React.Component {
-    static async getInitialProps({ req }) {
-      // const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
-      // return { userAgent }
-      return {}
-    }
-
-    componentDidCatch() {
-
-    }
 
     render() {
       return (

@@ -1,8 +1,9 @@
 import WithPost from '../../helpers/with-post';
 import * as Components from 'idyll-components';
-import { readFileSync } from 'fs';
-import { join } from 'path';
-const markup = readFileSync(join(__dirname, 'idyll', 'sci-fi.idl'), 'utf8');
+// import { readFileSync } from 'fs';
+// import { join } from 'path';
+// const markup = readFileSync(join(__dirname, 'idyll', 'sci-fi.idl'), 'utf8');
+const markup = ''
 
 export default WithPost({
   title: 'How to live forever.',

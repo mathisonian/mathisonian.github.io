@@ -159,10 +159,13 @@ const renderResearch = () => {
         title="Selected papers and presentations" >
         <ul>
           <li>
+            <b>Communicating With Interactive Articles</b>: Fred Hohman, Matthew Conlen, Jeffrey Heer, Duen Horng (Polo) Chau. <i>Distill</i> 2020. <a href="https://distill.pub/2020/communicating-with-interactive-articles/">Interactive Article</a>
+          </li>
+          <li>
             <b>Launching the Parametric Press</b>: Matthew Conlen, Fred Hohman. <i>Visualization for Communication at IEEE VIS (VisComm). Vancouver, Canada,</i> 2019. <a href="/static/papers/viscomm.pdf">PDF</a>
           </li>
           <li>
-            <b>Capture and Analysis of Active Reading Behaviors for Interactive Articles on the Web</b>: Matthew Conlen, Alex Kale, Jeffrey Heer. <i>Computer Graphics Forum (Proc. EuroVis)</i> 2019. <a href="http://idl.cs.washington.edu/files/2019-IdyllAnalytics-EuroVis.pdf/">PDF</a>
+            <b>Capture and Analysis of Active Reading Behaviors for Interactive Articles on the Web</b>: Matthew Conlen, Alex Kale, Jeffrey Heer. <i>Computer Graphics Forum (Proc. EuroVis)</i> 2019. <a href="http://idl.cs.washington.edu/files/2019-IdyllAnalytics-EuroVis.pdf">PDF</a>
           </li>
           <li>
             <b>The Beginner's Guide to Dimensionality Reduction</b>: Matthew Conlen, Fred Hohman. <i>IEEE Vis Workshop on Visualization for AI Explainability</i> 2018. <a href="https://idyll.pub/post/dimensionality-reduction-293e465c2a3443e8941b016d/">Interactive Article</a>

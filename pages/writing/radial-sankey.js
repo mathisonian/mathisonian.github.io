@@ -3,9 +3,11 @@ import Appartus from '../../components/idyll/apparatus';
 import Easer from '../../components/idyll/easer';
 import Center from '../../components/idyll/center';
 import * as Components from 'idyll-components';
-import { readFileSync } from 'fs';
-import { join } from 'path';
-const markup = readFileSync(join(__dirname, 'idyll', 'radial-sankey.idl'), 'utf8');
+// import { readFileSync } from 'fs';
+// import { join } from 'path';
+// const markup = readFileSync(join(__dirname, 'idyll', 'radial-sankey.idl'), 'utf8');
+
+const markup = '';
 
 export default WithPost({
   title: 'Notes on the Sankey Diagram',

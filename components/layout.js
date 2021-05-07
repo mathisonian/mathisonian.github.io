@@ -153,7 +153,7 @@ export default class extends React.Component {
             }
           </div>
           <div className="intro">
-            <b>Matthew Conlen</b> is working as a graphics editor at the New York Times and completing a computer science Ph.D at the University of Washington.
+            <b>Matthew Conlen</b> is a Ph.D candidate in the <a href="http://idl.cs.washington.edu/">Interactive Data Lab</a> at the University of Washington.
           </div>
           <div className="layout-page-container">
             { children }
@@ -179,13 +179,6 @@ export default class extends React.Component {
           body, html {
             margin: 0;
             padding: 0;
-          }
-          html {
-            opacity: 0;
-            transition: opacity 0.25s ease-in;
-          }
-          html.loaded {
-            opacity: 1;
           }
         `}
         </style>
