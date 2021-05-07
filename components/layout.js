@@ -113,7 +113,7 @@ export default class extends React.Component {
 
   getDescription() {
     const { description, subtitle } = this.props;
-    const ret = subtitle || description || 'Matthew Conlen is working as a graphics editor at the New York Times and completing a Ph.D. in computer science at the University of Washington.';
+    const ret = subtitle || description || 'Matthew Conlen is a computer science Ph.D. candidate at the University of Washington.';
     return ret;
   }
 
@@ -153,7 +153,7 @@ export default class extends React.Component {
             }
           </div>
           <div className="intro">
-            <b>Matthew Conlen</b> is a Ph.D candidate in the <a href="http://idl.cs.washington.edu/">Interactive Data Lab</a> at the University of Washington.
+            <b>Matthew Conlen</b> is a Ph.D candidate at the <a href="http://idl.cs.washington.edu/">Interactive Data Lab</a> at the University of Washington.
           </div>
           <div className="layout-page-container">
             { children }
