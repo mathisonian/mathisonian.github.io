@@ -217,19 +217,34 @@ const renderJournalism = () => {
       <WorkItem title="Selected bylines">
         <ul>
           <li>
+            <a href="https://climate.nasa.gov/news/3020/how-much-carbon-dioxide-are-we-emitting/" target="_blank"> How Much Carbon Dioxide Are We Emitting? </a> — NASA  Climate
+          </li>
+          <li>
             <a href="https://www.nytimes.com/interactive/2021/02/25/us/nursing-home-covid-vaccine.html" target="_blank">Nursing Homes, Once Hotspots, Far Outpace U.S. in Covid Declines</a> — New York Times
           </li>
           <li>
             <a href="https://www.nytimes.com/interactive/2021/02/20/us/us-herd-immunity-covid.html" target="_blank">When Could the United States Reach Herd Immunity? It’s Complicated.</a> — New York Times
           </li>
           <li>
+            <a href="https://www.nytimes.com/2020/12/05/health/covid-vaccine-first.html" target="_blank">Essential and Frontline Occupations [Embedded Graphic]</a> — New York Times
+          </li>
+          <li>
+            <a href="https://www.nytimes.com/interactive/2020/11/03/us/elections/forecast-president.html" target="_blank">Election Needles: President</a> — New York Times
+          </li>
+          <li>
             <a href="https://www.nytimes.com/2020/11/02/upshot/new-york-times-needle-election.html" target="_blank">Needle Update: What to Expect on Election Night</a> — New York Times
+          </li>
+          <li>
+            <a href="https://www.nytimes.com/interactive/2020/07/23/magazine/climate-migration.html" target="_blank">The Great Climate Migration [Embedded Graphic]</a> — New York Times
           </li>
           <li>
             <a href="https://www.nytimes.com/interactive/2020/07/22/us/covid-testing-rising-cases.html" target="_blank">The Rise in Testing Is Not Driving the Rise in U.S. Virus Cases</a> — New York Times
           </li>
           <li>
             <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-nursing-homes.html" target="_blank">Nearly One-Third of U.S. Coronavirus Deaths Are Linked to Nursing Homes</a> — New York Times
+          </li>
+          <li>
+            <a href="https://www.nytimes.com/interactive/2020/05/18/us/coronavirus-underlying-conditions.html" target="_blank">Where Chronic Health Conditions and Coronavirus Could Collide</a> — New York Times
           </li>
           <li>
             <a href="https://climate.nasa.gov/news/2933/visualizing-the-quantities-of-climate-change/" target="_blank"> Visualizing the Quantities of Climate Change: Ice Sheet Loss in Greenland and Antarctica </a> — NASA Climate
@@ -260,7 +275,7 @@ const renderJournalism = () => {
           </li>
         </ul>
       </WorkItem>
-      <WorkItem title="FiveThirtyEight" image="fivethirtyeight.gif"  url="https://fivethirtyeight.com/matthew-conlen">
+      {/* <WorkItem title="FiveThirtyEight" image="fivethirtyeight.gif"  url="https://fivethirtyeight.com/matthew-conlen">
       <p>
       I've worked with Nate Silver's <a target="_blank" href="https://fivethirtyeight.com">FiveThirtyEight</a> for several
       years in various capacities. I started with them in 2013 when the site launched under
@@ -280,7 +295,7 @@ const renderJournalism = () => {
         open-source platform for community building and management. We also built tools for crowd-sourcing audio transcriptions of articles and for readers to have civil debates about
         divisive topics.
       </p>
-        </WorkItem>
+        </WorkItem> */}
         <style jsx>{`
           a, a:visited {
             color: #000;
