@@ -12,7 +12,7 @@ const WorkItem = ({ title, image, subtitle, children, url }) => {
       </div>
       {
         image ? (
-          <a href={url}><img className="item-image" src={`/static/img/${image}`} /></a>
+          <a href={url}><img className="item-image" src={`/static/img/small/${image}`} /></a>
         ) : null
       }
 

@@ -113,7 +113,7 @@ export default class extends React.Component {
 
   getDescription() {
     const { description, subtitle } = this.props;
-    const ret = subtitle || description || 'Matthew Conlen is a computer science Ph.D. candidate at the University of Washington.';
+    const ret = subtitle || description || 'Matthew Conlen is a computer science  Ph.D. candidate at the University of Washington.';
     return ret;
   }
 
@@ -153,7 +153,11 @@ export default class extends React.Component {
             }
           </div>
           <div className="intro">
-            <b>Matthew Conlen</b> is a Ph.D candidate at the <a href="http://idl.cs.washington.edu/">Interactive Data Lab</a> at the University of Washington.
+            <b><a href="/">Matthew Conlen</a></b> is a data journalist and human-computer interaction researcher. He currently serves as an advisor
+            to <a href="https://ourworldindata.org">Our World in Data</a> focusing on data visualization and digital publishing.
+            <br/><br/>
+            Matthew received his Ph.D. from the University of Washington where he was advised by Jeffrey Heer in the Interactive Data Lab.
+            {/* For consulting or collaboration inquiries please contact the <a href="https://hdig.org">Human-Data Interfaces Group</a>. */}
           </div>
           <div className="layout-page-container">
             { children }
@@ -165,8 +169,8 @@ export default class extends React.Component {
             <Link href='/press'><div><a className={isSelected(slug, '/press')}>Press</a></div></Link>
             <div onClick={this.toggleContact} className="contact-button"><a className={`no-border ${this.state.showContact ? 'selected' : ''}`} >Contact</a></div>
             <div className={`contact`}>
-            <div><a href='mailto:contact@mathisonian.com'>Email</a></div>
-            <div><a href='https://github.com/mathisonian'>GitHub</a></div>
+            {/* <div><a href='mailto:contact@mathisonian.com'>Email</a></div> */}
+            {/* <div><a href='https://github.com/mathisonian'>GitHub</a></div> */}
             <div><a href='https://twitter.com/mathisonian'>Twitter</a></div>
             </div>
             </nav>

@@ -152,12 +152,18 @@ const renderResearch = () => {
     <div>
       <WorkItem title="Interactive Data Lab" subtitle="Ph.D. Student"  image="idl.png"  url="https://idl.cs.washington.edu/">
         <p>
-        I am currently pursuing a Ph.D. in computer science at the University of Washington, advised by <a href="https://homes.cs.washington.edu/~jheer/" target="_blank">Jeffrey Heer</a> in the <a href="https://idl.cs.washington.edu/" target="_blank">Interactive Data Lab</a>. My work is based in human computer interaction (HCI) and information visualization. Currently my primary focus is on data-driven storytelling.
+        I completed a Ph.D. in computer science at the University of Washington, advised by <a href="https://homes.cs.washington.edu/~jheer/" target="_blank">Jeffrey Heer</a> in the <a href="https://idl.cs.washington.edu/" target="_blank">Interactive Data Lab</a>. My work is based in human-computer interaction (HCI) and information visualization. Currently my primary focus is on data-driven storytelling.
         </p>
       </WorkItem>
       <WorkItem
         title="Selected papers and presentations" >
         <ul>
+          <li>
+            <b>Authoring and Publishing Interactive Articles</b>: Matthew Conlen. <i>Ph.D. dissertation</i> 2021. <a href="/static/papers/authoring-and-publishing-interactive-articles.pdf">PDF</a>
+          </li>
+          <li>
+            <b>Idyll Studio: A structured editor for authoring interactive and data-driven articles</b>: Matthew Conlen, Megan Vo, Alan Tan, Jeffrey Heer <i>UIST</i> 2021. <a href="http://idl.cs.washington.edu/files/2021-IdyllStudio-UIST.pdf">PDF</a>
+          </li>
           <li>
             <b>Communicating With Interactive Articles</b>: Fred Hohman, Matthew Conlen, Jeffrey Heer, Duen Horng (Polo) Chau. <i>Distill</i> 2020. <a href="https://distill.pub/2020/communicating-with-interactive-articles/">Interactive Article</a>
           </li>
@@ -226,7 +232,16 @@ const renderJournalism = () => {
             <a href="https://www.nytimes.com/interactive/2021/02/20/us/us-herd-immunity-covid.html" target="_blank">When Could the United States Reach Herd Immunity? It’s Complicated.</a> — New York Times
           </li>
           <li>
-            <a href="https://www.nytimes.com/2020/12/05/health/covid-vaccine-first.html" target="_blank">Essential and Frontline Occupations [Embedded Graphic]</a> — New York Times
+            <a href="https://www.nytimes.com/interactive/2021/01/24/us/covid-vaccine-rollout.html" target="_blank">Why Vaccines Alone Will Not End the Pandemic</a> — New York Times
+          </li>
+          <li>
+            <a href="https://www.nytimes.com/interactive/2020/us/covid-hospitals-near-you.html" target="_blank">How Full Are Hospital I.C.U.s Near You?</a> — New York Times. <i>Part of the package that won the <a href="https://www.pulitzer.org/winners/new-york-times-6">Pulitzer Prize in Public Service.</a></i>
+          </li>
+          <li>
+            <a href="https://www.nytimes.com/2020/12/05/health/covid-vaccine-first.html" target="_blank">Essential and Frontline Occupations</a> — New York Times [embedded visualization]
+          </li>
+          <li>
+            <a href="https://www.nytimes.com/interactive/2020/11/17/upshot/georgia-precinct-shift-suburbs.html" target="_blank">Detailed Turnout Data Shows How Georgia Turned Blue</a> — New York Times
           </li>
           <li>
             <a href="https://www.nytimes.com/interactive/2020/11/03/us/elections/forecast-president.html" target="_blank">Election Needles: President</a> — New York Times
@@ -235,13 +250,13 @@ const renderJournalism = () => {
             <a href="https://www.nytimes.com/2020/11/02/upshot/new-york-times-needle-election.html" target="_blank">Needle Update: What to Expect on Election Night</a> — New York Times
           </li>
           <li>
-            <a href="https://www.nytimes.com/interactive/2020/07/23/magazine/climate-migration.html" target="_blank">The Great Climate Migration [Embedded Graphic]</a> — New York Times
+            <a href="https://www.nytimes.com/interactive/2020/07/23/magazine/climate-migration.html" target="_blank">The Great Climate Migration</a> — New York Times [embedded map]
           </li>
           <li>
             <a href="https://www.nytimes.com/interactive/2020/07/22/us/covid-testing-rising-cases.html" target="_blank">The Rise in Testing Is Not Driving the Rise in U.S. Virus Cases</a> — New York Times
           </li>
           <li>
-            <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-nursing-homes.html" target="_blank">Nearly One-Third of U.S. Coronavirus Deaths Are Linked to Nursing Homes</a> — New York Times
+            <a href="https://www.nytimes.com/interactive/2020/us/coronavirus-nursing-homes.html" target="_blank">Nearly One-Third of U.S. Coronavirus Deaths Are Linked to Nursing Homes</a> — New York Times. <i>Part of the package that won the <a href="https://www.pulitzer.org/winners/new-york-times-6">Pulitzer Prize in Public Service.</a></i>
           </li>
           <li>
             <a href="https://www.nytimes.com/interactive/2020/05/18/us/coronavirus-underlying-conditions.html" target="_blank">Where Chronic Health Conditions and Coronavirus Could Collide</a> — New York Times

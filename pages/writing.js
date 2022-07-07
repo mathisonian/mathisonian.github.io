@@ -75,7 +75,7 @@ export default class extends React.Component {
               </li>
             </ul>
           </section>
-          <section>
+          {/* <section>
             <h4>Personal</h4>
             <ul>
               <li><Link href="/writing/keith"><a>The story of my close friend's death</a></Link>
@@ -85,7 +85,7 @@ export default class extends React.Component {
               <span className="year"> — 2013 </span>
               </li>
             </ul>
-          </section>
+          </section> */}
         </WritingLayout>
         <style jsx>{`
           h1 {
